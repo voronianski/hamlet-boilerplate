@@ -14,7 +14,7 @@ env = process.env.NODE_ENV or 'development'
 paths =
 	js: './client/public/js'
 	coffeeFiles: './client/**/*.coffee'
-	hamlFiles: './client/templates/haml/**/*.haml'
+	hamlFiles: './client/templates/**/*.haml'
 	stylFiles: './client/styl/**/*.styl'
 
 

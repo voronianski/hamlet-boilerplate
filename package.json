@@ -44,6 +44,7 @@
     "hamlet-cli": "^0.6.0-pre.10",
     "hamlet-runtime": "^0.6.0-pre.11",
     "network-address": "0.0.4",
+    "o_0": "^0.2.0",
     "underscore": "^1.6.0"
   }
 }

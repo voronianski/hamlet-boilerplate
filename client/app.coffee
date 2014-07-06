@@ -1,13 +1,9 @@
 mainTemplate = require './templates/hello'
+binding = require './coffee/binding'
 
 data =
-	title: 'Hello World Hamlet!'
-
-func = (a) =>
-	b = 10
-
-	return a * b
-
-console.log func(2)
+	title: 'Buenos Dias, Hamlet!'
 
 document.body.appendChild mainTemplate(data)
+
+binding.init()
