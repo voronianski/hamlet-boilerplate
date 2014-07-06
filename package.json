@@ -1,0 +1,49 @@
+{
+  "name": "hamlet-boilerplate",
+  "version": "0.1.0",
+  "description": "Hamlet.coffee boilerplate project using browserify, gulp and stylus",
+  "main": "app.coffee",
+  "scripts": {
+    "start": "gulp --require coffee-script/register",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/voronianski/hamlet-boilerplate.git"
+  },
+  "keywords": [
+    "hamlet",
+    "coffee",
+    "haml",
+    "boilerplate",
+    "browserify",
+    "stylus",
+    "express",
+    "gulp"
+  ],
+  "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "coffeeify": "^0.6.0",
+    "del": "^0.1.1",
+    "gulp": "^3.8.5",
+    "gulp-browserify": "^0.5.0",
+    "gulp-hamlet-compile": "git://github.com/voronianski/gulp-hamlet-compile.git",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-spawn": "^0.3.0",
+    "gulp-stylus": "^1.0.2",
+    "gulp-uglifyjs": "^0.4.2",
+    "gulp-watch": "^0.6.8"
+  },
+  "dependencies": {
+    "coffee-script": "^1.7.1",
+    "dookie-css": "^0.1.5",
+    "ejs": "^1.0.0",
+    "express": "^4.4.5",
+    "hamlet-cli": "^0.6.0-pre.10",
+    "hamlet-runtime": "^0.6.0-pre.11",
+    "network-address": "0.0.4",
+    "underscore": "^1.6.0"
+  }
+}
