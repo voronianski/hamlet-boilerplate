@@ -11,3 +11,12 @@
       %label
         %input(type="checkbox" @checked)
         %span.item(@class)= @description
+
+.totals
+  .undone
+    %span.count= @undoneCount
+     left
+  .clear(click=@removeDone)
+    Clear
+    %span.count= @doneCount
+     items

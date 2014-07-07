@@ -15,6 +15,24 @@ model =
 	todos: collection
 	checkCompleteAll: checkCompleteAll
 
+	done: ->
+		@todos.filter (todo) ->
+			todo.checked()
+
+	undone: ->
+		@todos.filter (todo) ->
+			!todo.checked()
+
+	doneCount: () ->
+		@done().length
+
+	undoneCount: () ->
+		@undone().length
+
+	removeDone: ->
+		@done().forEach collection.remove
+		@checkCompleteAll(false)
+
 	add: (e) ->
 		return unless e.keyCode is 13
 		return unless @value() isnt ''
