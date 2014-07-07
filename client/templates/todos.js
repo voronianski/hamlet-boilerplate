@@ -4,7 +4,7 @@ module.exports = function(data) {
     __runtime = require("hamlet-runtime")(this);
     __runtime.push(document.createDocumentFragment());
     __runtime.push(document.createElement("h2"));
-    __runtime.text("Todos by Hamlet\n");
+    __runtime.text("To Do List\n");
     __runtime.pop();
     __runtime.push(document.createElement("input"));
     __runtime.attribute("type", "text");

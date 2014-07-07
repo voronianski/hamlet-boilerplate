@@ -20,7 +20,7 @@ paths =
 
 gulp.task 'styles', ->
 	return gulp.src(paths.stylFiles)
-		.pipe(stylus compress: true, use: [dookie.css()])
+		.pipe(stylus compress: true, use: [dookie.css()], errors: true)
 		.pipe(gulp.dest './client/public/css')
 
 gulp.task 'hamlet', ->

@@ -25,7 +25,6 @@
   "license": "MIT",
   "devDependencies": {
     "coffeeify": "^0.6.0",
-    "del": "^0.1.1",
     "gulp": "^3.8.5",
     "gulp-browserify": "^0.5.0",
     "gulp-hamlet-compile": "git://github.com/voronianski/gulp-hamlet-compile.git",
@@ -40,7 +39,8 @@
     "coffee-script": "^1.7.1",
     "dookie-css": "^0.1.5",
     "ejs": "^1.0.0",
-    "express": "^4.4.5",
+    "express": "^4.5.1",
+    "gulp-hamlet-compile": "git://github.com/voronianski/gulp-hamlet-compile.git",
     "hamlet-cli": "^0.6.0-pre.10",
     "hamlet-runtime": "^0.6.0-pre.11",
     "network-address": "0.0.4",
