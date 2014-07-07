@@ -9,6 +9,6 @@ model =
 	first: Observable 'Prince'
 	last: Observable 'Hamlet'
 
-exports.init = () ->
+exports.init = ->
 	view = document.getElementById 'binding'
 	view.appendChild bindingTemplate(model)
