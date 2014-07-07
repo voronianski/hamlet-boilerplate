@@ -1,11 +1,7 @@
-mainTemplate = require './templates/hello'
+hello = require './coffee/hello'
 binding = require './coffee/binding'
 todos = require './coffee/todos'
 
-data =
-	title: 'Buenos Dias, Hamlet!'
-
-document.body.appendChild mainTemplate(data)
-
+hello.init()
 binding.init()
 todos.init()

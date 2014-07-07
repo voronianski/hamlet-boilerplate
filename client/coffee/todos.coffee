@@ -23,10 +23,10 @@ model =
 		@todos.filter (todo) ->
 			!todo.checked()
 
-	doneCount: () ->
+	doneCount: ->
 		@done().length
 
-	undoneCount: () ->
+	undoneCount: ->
 		@undone().length
 
 	removeDone: ->
