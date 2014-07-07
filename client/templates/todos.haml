@@ -1,6 +1,13 @@
 %h2 Todos by Hamlet
 %input(type="text" @value placeholder="What needs to be done?" onkeydown=@add)
 
+%label
+  %input(type="checkbox" checked=@checkCompleteAll)
+  %span Mark all as complete
+
 %ul
   -each @todos, ->
-    %li= @description
+    %li
+      %label
+        %input(type="checkbox" @checked)
+        %span.item(@class)= @description

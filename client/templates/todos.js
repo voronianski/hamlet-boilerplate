@@ -12,10 +12,28 @@ module.exports = function(data) {
     __runtime.attribute("placeholder", "What needs to be done?");
     __runtime.attribute("onkeydown", this.add);
     __runtime.pop();
+    __runtime.push(document.createElement("label"));
+    __runtime.push(document.createElement("input"));
+    __runtime.attribute("type", "checkbox");
+    __runtime.attribute("checked", this.checkCompleteAll);
+    __runtime.pop();
+    __runtime.push(document.createElement("span"));
+    __runtime.text("Mark all as complete\n");
+    __runtime.pop();
+    __runtime.pop();
     __runtime.push(document.createElement("ul"));
     __runtime.each(this.todos, function() {
       __runtime.push(document.createElement("li"));
+      __runtime.push(document.createElement("label"));
+      __runtime.push(document.createElement("input"));
+      __runtime.attribute("type", "checkbox");
+      __runtime.attribute("checked", this.checked);
+      __runtime.pop();
+      __runtime.push(document.createElement("span"));
+      __runtime.classes("item", this["class"]);
       __runtime.text(this.description);
+      __runtime.pop();
+      __runtime.pop();
       return __runtime.pop();
     });
     __runtime.pop();

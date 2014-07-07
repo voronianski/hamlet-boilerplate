@@ -5,11 +5,20 @@ Observable = require 'o_0'
 
 collection = Observable []
 
+checkCompleteAll = Observable false
+checkCompleteAll.observe (val) ->
+	collection.forEach (i) ->
+		i.checked(val)
+
 model =
 	value: Observable ''
 	todos: collection
+	checkCompleteAll: checkCompleteAll
+
 	add: (e) ->
 		return unless e.keyCode is 13
+		return unless @value() isnt ''
+
 		todo =
 			description: @value()
 			checked: Observable false
@@ -18,6 +27,7 @@ model =
 
 		@todos.push todo
 		@value ''
+
 
 exports.init = ->
 	view = document.getElementById 'todo'
