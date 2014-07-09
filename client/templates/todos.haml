@@ -1,11 +1,11 @@
-%h2 To Do List
+%h2= "2. To Do List"
 %input(type="text" @value placeholder="What needs to be done?" onkeydown=@add)
 
-%label
+%label.mark
   %input(type="checkbox" checked=@checkCompleteAll)
-  %span Mark all as complete
+  %span.mark Mark all as complete
 
-%ul
+%ul.list
   -each @todos, ->
     %li
       %label

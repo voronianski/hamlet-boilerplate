@@ -4,7 +4,7 @@ module.exports = function(data) {
     __runtime = require("hamlet-runtime")(this);
     __runtime.push(document.createDocumentFragment());
     __runtime.push(document.createElement("h2"));
-    __runtime.text("To Do List\n");
+    __runtime.text("2. To Do List");
     __runtime.pop();
     __runtime.push(document.createElement("input"));
     __runtime.attribute("type", "text");
@@ -13,15 +13,18 @@ module.exports = function(data) {
     __runtime.attribute("onkeydown", this.add);
     __runtime.pop();
     __runtime.push(document.createElement("label"));
+    __runtime.classes("mark");
     __runtime.push(document.createElement("input"));
     __runtime.attribute("type", "checkbox");
     __runtime.attribute("checked", this.checkCompleteAll);
     __runtime.pop();
     __runtime.push(document.createElement("span"));
+    __runtime.classes("mark");
     __runtime.text("Mark all as complete\n");
     __runtime.pop();
     __runtime.pop();
     __runtime.push(document.createElement("ul"));
+    __runtime.classes("list");
     __runtime.each(this.todos, function() {
       __runtime.push(document.createElement("li"));
       __runtime.push(document.createElement("label"));

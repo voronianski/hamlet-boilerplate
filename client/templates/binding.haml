@@ -1,4 +1,4 @@
-%h2= "Two Way Binding"
+%h2= "1. Two Way Binding"
 %h3= @name
-%input(value=@first placeholder="First name")
-%input(value=@last placeholder="Last name")
+%input.first(type="text" value=@first placeholder="First name")
+%input.last(type="text" value=@last placeholder="Last name")
