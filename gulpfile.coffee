@@ -17,7 +17,6 @@ paths =
 	hamlFiles: './client/templates/**/*.haml'
 	stylFiles: './client/styl/**/*.styl'
 
-
 gulp.task 'styles', ->
 	return gulp.src(paths.stylFiles)
 		.pipe(stylus compress: true, use: [dookie.css()], errors: true)
@@ -39,7 +38,7 @@ gulp.task 'browserify', ->
 		.pipe(gulp.dest paths.js)
 
 gulp.task 'uglify', ->
-	return gulp.src('./client/public/build/bundle.js')
+	return gulp.src(paths.js + '/bundle.js')
 		.pipe(uglify())
 		.pipe(rename 'bundle.min.js')
 		.pipe(gulp.dest paths.js)
@@ -55,7 +54,7 @@ gulp.task 'watch', ->
 	gulp.watch [paths.stylFiles], ['styles']
 
 gulp.task 'server:dev', ['styles', 'hamlet', 'browserify', 'nodemon', 'watch']
-gulp.task 'server:prod', ['styles', 'hamlet', 'browserify', 'uglify']
+gulp.task 'server:prod', ['styles', 'hamlet', 'browserify', 'uglify', 'nodemon']
 
 gulp.task 'default', ->
 	if env is 'development'
